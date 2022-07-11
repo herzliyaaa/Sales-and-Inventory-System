@@ -1,87 +1,56 @@
-<script setup>
-import HelloWorld from "./components/HelloWorld.vue";
-import TheWelcome from "./components/TheWelcome.vue";
+<script>
+import SideBar from "./components/sidebar/sidebar.vue";
+export default {
+  components: {
+    SideBar,
+  },
+};
 </script>
 
 <template>
-  <header>
-    <img
-      alt="Vue logo"
-      class="logo"
-      src="./assets/logo.svg"
-      width="125"
-      height="125"
-    />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+  <div id="app">
+    <SideBar />
+    <!-- Page content -->
+    <div class="content">
+      <router-view />
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  </div>
 </template>
 
 <style>
-@import "./assets/base.css";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-
-  font-weight: normal;
+:root {
+  --header-height: 3rem;
+  --nav-width: 68px;
+  --first-color: #6d28d9;
+  /* --first-color: #1f795e; */
+  /* --first-color-light: #AFA5D9; */
+  --first-color-light: #fdfdfd;
+  --white-color: #f7f6fb;
+  /* --body-font: 'Nunito', sans-serif; */
+  --body-font: "Montserrat", sans-serif;
+  --normal-font-size: 1rem;
+  --z-fixed: 100;
 }
 
-header {
-  line-height: 1.5;
+*,
+::before,
+::after {
+  box-sizing: border-box;
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-a,
-.green {
+a {
   text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
+  color: none;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+a:hover {
+  color: none;
 }
 
-@media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
-
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
+h1 {
+  font-family: var(--body-font) !important;
+  font-weight: 700;
 }
 </style>
