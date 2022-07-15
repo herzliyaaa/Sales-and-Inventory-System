@@ -75,7 +75,7 @@ Item.getAll = (description, result) => {
 Item.updateById = (id, item, result) => {
   sql.query(
     "UPDATE items SET description = ?, quantity = ?, cost = ? WHERE id = ?",
-    [item.title, item.description, item.published, id],
+    [item.description, item.quantity, item.cost, id],
     (err, res) => {
       if (err) {
         console.log("error: ", err);

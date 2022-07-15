@@ -5,8 +5,9 @@ TODO:
 3. Form Validation
 4. Selectable Component 
 
-4. Create CRUD API (Customers, Items, Suppliers)
+4. Create CRUD API (Customers,  Suppliers)
 5. Select Multiple Items fetched from the Items Table
 
 DONE:
 1. Fix Sidebar Active 
+2. Create Crud In Items
