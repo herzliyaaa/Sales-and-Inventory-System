@@ -6,7 +6,7 @@ const getSuppliers = () => {
 
   const load = async () => {
     try {
-      let data = await fetch("http://localhost:8080/api/customers");
+      let data = await fetch("http://localhost:8080/api/suppliers");
       if (!data.ok) {
         throw Error("no available data");
       }

@@ -1,13 +1,19 @@
 <template>
   <div>
     <h1>Items</h1>
-    <PrimaryButton text="ADD ITEM" name="addItem" type="submit" onclick="" />
+    <div class="head-btn-container">
+      <PrimaryButton text="ADD ITEM" name="addItem" type="submit" onclick="" />
+    </div>
     <div v-for="item in items" :key="item.id">
       <div class="item-container">
         <h3>Item Name: {{ item.description }}</h3>
         <p>Barcode: {{ item.barcode }}</p>
         <p>Quantity: {{ item.quantity }}</p>
         <p>Cost per Unit: {{ item.cost }}</p>
+        <div class="action-container">
+          <PrimaryButton text="edit" onclick="" />
+          <PrimaryButton text="delete" onclick="" />
+        </div>
       </div>
     </div>
   </div>
@@ -39,5 +45,23 @@ export default {
   flex-direction: column;
   margin: 20px;
   background-color: rgb(232, 238, 222);
+}
+
+.action-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-content: center;
+  padding: 3px;
+  width: 100%;
+  gap: 10px;
+}
+
+.head-btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-content: center;
+  padding: 15px;
 }
 </style>
