@@ -1,19 +1,18 @@
-<!-- <template>
-  <div v-if="error">{{ error }}</div>
-  <div v-if="item" class="item">
+<template>
+  <div v-if="item">
     <h3>{{ item.description }}</h3>
   </div>
-</template> -->
+</template>
 
 <script>
-import getItem from "@/composables/getItem";
+import getItem from "../../composables/items/getItem";
 
 export default {
   props: ["id"],
   setup(props) {
-    const { error, post, load } = getItem(props.id);
+    const { error, item, load } = getItem(props.id);
     load();
-    return { error, post };
+    return { error, item };
   },
 };
 </script>

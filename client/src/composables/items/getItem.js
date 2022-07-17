@@ -6,7 +6,7 @@ const getItem = (id) => {
 
   const load = async () => {
     try {
-      let data = await fetch("http://localhost:8080/items/" + id);
+      let data = await fetch("http://localhost:8080/api/items/" + id);
       if (!data.ok) {
         throw Error("That post does not exist");
       }

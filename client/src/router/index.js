@@ -25,7 +25,7 @@ const routes = [
     name: "AddItems",
   },
   {
-    path: "/items/:id/edit",
+    path: "/items/edit/:id/",
     component: EditItems,
     name: "EditItems ",
   },
