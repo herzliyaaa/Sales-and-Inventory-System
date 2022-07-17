@@ -6,6 +6,8 @@ import EditItems from "../pages/items/edit-items.vue";
 import CustomersList from "../pages/customers/customers.vue";
 import SuppliersList from "../pages/suppliers/suppliers.vue";
 
+// const BASE_URL = "localhost:3000/";
+
 const routes = [
   {
     path: "/",
