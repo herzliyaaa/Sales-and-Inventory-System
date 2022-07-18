@@ -4,7 +4,9 @@ import ItemsList from "../pages/items/items.vue";
 import AddItems from "../pages/items/add-items.vue";
 import EditItems from "../pages/items/edit-items.vue";
 import CustomersList from "../pages/customers/customers.vue";
+import EditCustomer from "../pages/customers/edit-customer.vue";
 import SuppliersList from "../pages/suppliers/suppliers.vue";
+import EditSupplier from "../pages/suppliers/edit-supplier.vue";
 
 // const BASE_URL = "localhost:3000/";
 
@@ -25,9 +27,10 @@ const routes = [
     name: "AddItems",
   },
   {
-    path: "/items/edit/:id/",
+    path: "/items/:id/",
     component: EditItems,
-    name: "EditItems ",
+    name: "EditItems",
+    props: true,
   },
   {
     path: "/customers",
@@ -39,16 +42,16 @@ const routes = [
     component: SuppliersList,
     name: "SuppliersList ",
   },
-  // {
-  //   path: "/customers/:id/edit",
-  //   component: EditItems ,
-  //   name: "EditItems ",
-  // },
-  // {
-  //   path: "/suppliers/:id/edit",
-  //   component: EditItems ,
-  //   name: "EditItems ",
-  // }
+  {
+    path: "/customers/:id/",
+    component: EditCustomer,
+    name: "EditCustomer",
+  },
+  {
+    path: "/suppliers/:id/",
+    component: EditSupplier,
+    name: "EditSupplier",
+  },
 ];
 
 const router = createRouter({

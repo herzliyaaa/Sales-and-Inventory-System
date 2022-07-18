@@ -30,15 +30,15 @@ defineProps({
   },
   type: {
     type: String,
-    required: true,
+    required: false,
   },
   name: {
     type: String,
-    required: true,
+    required: false,
   },
   onClick: {
     type: String,
-    required: true,
+    required: false,
   },
 });
 </script>

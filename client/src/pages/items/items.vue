@@ -11,7 +11,9 @@
         <p>Quantity: {{ item.quantity }}</p>
         <p>Cost per Unit: {{ item.cost }}</p>
         <div class="action-container">
-          <PrimaryButton text="edit" onclick="" />
+          <router-link :to="{ name: 'EditItems', params: { id: item.id } }">
+            <PrimaryButton text="edit" onclick="" />
+          </router-link>
           <PrimaryButton text="delete" onclick="" />
         </div>
       </div>

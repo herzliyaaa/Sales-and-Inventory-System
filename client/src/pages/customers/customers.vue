@@ -16,7 +16,11 @@
         <p>Customer Address: {{ customer.customerAddress }}</p>
         <p>Customer Contact: {{ customer.customerContact }}</p>
         <div class="action-container">
-          <PrimaryButton text="edit" onclick="" />
+          <router-link
+            :to="{ name: 'EditCustomer', params: { id: customer.id } }"
+          >
+            <PrimaryButton text="edit" onclick=""
+          /></router-link>
           <PrimaryButton text="delete" onclick="" />
         </div>
       </div>

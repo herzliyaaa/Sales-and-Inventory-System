@@ -15,7 +15,11 @@
         <p>Supplier Address: {{ supplier.supplierAddress }}</p>
         <p>supplier Contact: {{ supplier.supplierContact }}</p>
         <div class="action-container">
-          <PrimaryButton text="edit" onclick="" />
+          <router-link
+            :to="{ name: 'EditSupplier', params: { id: supplier.id } }"
+          >
+            <PrimaryButton text="edit" onclick="" />
+          </router-link>
           <PrimaryButton text="delete" onclick="" />
         </div>
       </div>
